@@ -86,7 +86,7 @@ fun AffirmationList(affirmationList: List<Affirmation>){
         }
     }
 }
-dd
+
 @Preview(showBackground = true)
 @Composable
 fun AffirmationAppPreview() {
