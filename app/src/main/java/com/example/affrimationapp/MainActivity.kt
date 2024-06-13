@@ -63,11 +63,11 @@ fun TopicsList(topics: List<Topic>){
         columns = GridCells.Fixed(2),
         verticalArrangement = Arrangement.spacedBy(8.dp),
         horizontalArrangement = Arrangement.spacedBy(8.dp)
-    ) {
+    )    {
         items(
             items = topics,
             key = {message ->
-                message.courseNumber
+                message.stringResourceId
             }
         ){topic ->
             TopicCard(topic = topic)
