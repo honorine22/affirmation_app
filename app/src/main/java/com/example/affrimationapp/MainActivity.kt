@@ -61,8 +61,8 @@ fun TopicApp(){
 fun TopicsList(topics: List<Topic>){
     LazyVerticalGrid(
         columns = GridCells.Fixed(2),
-        verticalArrangement = Arrangement.spacedBy(8.dp),
-        horizontalArrangement = Arrangement.spacedBy(8.dp)
+        verticalArrangement = Arrangement.spacedBy(2.dp),
+        horizontalArrangement = Arrangement.spacedBy(2.dp)
     )    {
         items(
             items = topics,
@@ -77,15 +77,15 @@ fun TopicsList(topics: List<Topic>){
 
 @Composable
 fun TopicCard(topic: Topic){
-    Box(modifier = Modifier.padding(16.dp, 42.dp, 0.dp, 0.dp)) {
+    Box(modifier = Modifier.padding(8.dp, 42.dp, 0.dp, 0.dp)) {
         Card {
             Row(horizontalArrangement = Arrangement.SpaceBetween) {
                 Image(
                     painter = painterResource(id = topic.imageResource),
                     contentDescription = stringResource(id = topic.stringResourceId),
                     modifier = Modifier
-                        .width(75.dp)
-                        .height(75.dp)
+                        .width(100.dp)
+                        .height(100.dp)
                 )
                 Column(modifier = Modifier.padding(8.dp, 8.dp, 8.dp, 0.dp)) {
                     Text(
